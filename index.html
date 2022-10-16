@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codecademy Portfolio of Aleksandra Chirtoska</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <script
+      src="https://kit.fontawesome.com/423f2883f2.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js" defer></script>
   </head>
   <body>
@@ -25,6 +30,35 @@
       <div class="overlay"></div>
       <h1 class="home-title">Aleksandra Chirtoska</h1>
       <h3 class="home-subtitle">web developer</h3>
+      <div class="home-social">
+        <a
+          class="home-social-links"
+          href="https://github.com/cirtoska"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          class="home-social-links"
+          href="https://www.linkedin.com/feed/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a
+          class="home-social-links"
+          href="https://www.freecodecamp.org/fcc9ee9d237-83ee-4388-9968-a4953127c589"
+          target="_blank"
+          ><i class="fa-brands fa-free-code-camp"></i
+        ></a>
+        <a
+          class="home-social-links"
+          href="https://www.codecademy.com/profiles/designPro12910"
+          target="_blank"
+          ><img
+            src="./images/codecademy-custom.svg"
+            alt="codecademy logo"
+            class="codecademy-icon"
+        /></a>
+      </div>
     </main>
     <section id="about">
       <h2 class="title">Me, Myself & I</h2>
@@ -60,20 +94,142 @@
       </article>
     </section>
     <section id="portfolio">
-      <h2 class="title">Portfolio</h2>
-      <article class="porfolio-gallery"></article>
+      <article class="porfolio-gallery">
+        <div class="container">
+          <h2 class="title">Portfolio</h2>
+
+          <div class="img-gallery-magnific">
+            <div class="magnific-img">
+              <a
+                class="image-popup-vertical-fit"
+                href="./images/projects/responsive-club-website.webp"
+                title="Project Responsive Club Website"
+              >
+                <img
+                  src="./images/projects/responsive-club-website.webp"
+                  alt="Project Responsive Club Website"
+                />
+              </a>
+            </div>
+            <div class="magnific-img">
+              <a
+                class="image-popup-vertical-fit"
+                href="./images/projects/flexbox-business-site.webp"
+                title="Project Flexbox Business Website"
+              >
+                <img
+                  src="./images/projects/flexbox-business-site.webp"
+                  alt="Project Flexbox Business Website"
+                />
+              </a>
+            </div>
+            <div class="magnific-img">
+              <a
+                class="image-popup-vertical-fit"
+                href="./images/projects/number-guesser.webp"
+                title="JavaScript Project Number Guesser"
+              >
+                <img
+                  src="./images/projects/number-guesser.webp"
+                  alt="JavaScript Project Number Guesser"
+                />
+              </a>
+            </div>
+            <div class="magnific-img">
+              <a
+                class="image-popup-vertical-fit"
+                href="./images/projects/build-your-own-cheat-sheet.webp"
+                title="Build your own cheet sheet"
+              >
+                <img
+                  src="./images/projects/build-your-own-cheat-sheet.webp"
+                  alt="Build your own cheet sheet"
+                />
+              </a>
+            </div>
+            <div class="magnific-img">
+              <a
+                class="image-popup-vertical-fit"
+                href="./images/projects/website-design-system.webp"
+                title="Project Website Design System"
+              >
+                <img
+                  src="./images/projects/website-design-system.webp"
+                  alt="Project Website Design System"
+                />
+              </a>
+            </div>
+            <div class="magnific-img">
+              <a
+                class="image-popup-vertical-fit"
+                href="./images/projects/fotomatic.webp"
+                title="Project Fotomatic"
+              >
+                <img
+                  src="./images/projects/fotomatic.webp"
+                  alt="Project Fotomatic"
+                />
+              </a>
+            </div>
+            <div class="magnific-img">
+              <a
+                class="image-popup-vertical-fit"
+                href="./images/projects/project-tea-cozy.webp"
+                title="Project Tea Cozy"
+              >
+                <img
+                  src="./images/projects/project-tea-cozy.webp"
+                  alt="Project Tea Cozy"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
     <section id="skills">
       <h2 class="title">Skills</h2>
-      <article class="my-skills"></article>
+      <article class="my-skills">
+        <i class="fa-brands fa-html5 skills-ico"></i>
+        <i class="fa-brands fa-css3-alt skills-ico"></i>
+        <i class="fa-brands fa-square-js skills-ico"></i>
+        <i class="fa-brands fa-react skills-ico"></i>
+        <i class="fa-brands fa-square-git skills-ico"></i>
+        <i class="fa-brands fa-sass skills-ico"></i>
+        <i class="fa-brands fa-wordpress skills-ico"></i>
+      </article>
     </section>
     <footer id="contact">
-      <p class="contact"></p>
-      <p className="copy">Copyright &copy; 2022</p>
-      <FaRobot />
-      <p className="created">
-        Created by <span class="signature">SashkaChi.</span>
-      </p>
+      <div class="contact">
+        <p>
+          I'm interested in freelance opportunities - especialy ambicious or
+          large projects. However, if you have any other request or question,
+          don't hesitate to contact me.
+        </p>
+        <a class="social-links" href="mailto:cirtoska@gmail.com"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+        <a
+          class="social-links"
+          href="https://github.com/cirtoska"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          class="social-links"
+          href="https://www.linkedin.com/feed/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <div className="copy">
+        <p>Copyright &copy; 2022</p>
+        <p className="created">
+          Created by <span class="signature">SashkaChi.</span>
+        </p>
+      </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   </body>
 </html>
