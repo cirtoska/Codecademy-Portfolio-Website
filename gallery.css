@@ -18,12 +18,16 @@
    font-family: 'Abel', sans-serif;
 }
 .img-gallery-magnific {
-    /* display: inline-block;
-    width: 32.3%; */
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
     align-items: center;
     gap: 5px;
+}
+
+@media (max-width: 400px) {
+  .img-gallery-magnific {
+    grid-template-columns: repeat( auto-fill, minmax(200px, 1fr) );
+}
 }
 a.image-popup-vertical-fit {
     cursor: -webkit-zoom-in;

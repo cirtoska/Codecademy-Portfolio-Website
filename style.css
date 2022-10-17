@@ -8,6 +8,11 @@ font-family: 'Playfair Display', serif; */
   --clr-white: #fff;
   --text-primary: #232429;
 
+  --gray-600: #7a7b7f;
+  --gray-700: #65666c;
+  --gray-800: #4e4f55;
+  --gray-900: #3a3b40;
+
   --slate-blue: #7663db;
   --slate-blue-50: #faf9fe;
   --slate-blue-100: #eeecfb;
@@ -20,8 +25,19 @@ font-family: 'Playfair Display', serif; */
   --slate-blue-800: #4b3f8c;
   --slate-blue-900: #3c326f;
 
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --zany-pink-50: #fef9f9;
+  --zany-pink-100: #fbe9ec;
+  --zany-pink-200: #f5cad1;
+  --zany-pink-300: #eeaab5;
+  --zany-pink-400: #e88898;
+  --zany-pink-500: #d26b7c;
+  --zany-pink-600: #ad5866;
+  --zany-pink-700: #904955;
+  --zany-pink-800: #723a43;
+  --zany-pink-900: #5a2e35;
+
+  --light-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  --dark-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 * {
@@ -32,7 +48,7 @@ font-family: 'Playfair Display', serif; */
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: var(--slate-blue-900);
+  background-color: var(--gray-900);
   color: var(--slate-blue-50);
 }
 
@@ -68,6 +84,9 @@ nav a {
 }
 nav a:hover {
   border-bottom: 2px solid var(--slate-blue-200);
+}
+.hamburger {
+  display: none;
 }
 #home {
   position: relative;
@@ -121,13 +140,16 @@ nav a:hover {
 .home-social .fa-codepen {
   margin: 0.5rem;
   font-size: 2rem;
-  color: var(--slate-blue-300);
+  color: var(--slate-blue-200);
 }
-.home-social-links a {
-  color: var(--link-clr);
+.home-social .fa-github:hover,
+.home-social .fa-linkedin:hover, 
+.home-social .fa-free-code-camp:hover {
+  color: var(--zany-pink-400);
 }
 
-#home, #about, #skills {
+
+#home, #about {
   height: calc(100vh - 120px);
 }
 #about, #portfolio, #skills {
@@ -149,6 +171,7 @@ nav a:hover {
   letter-spacing: 0.1rem;
   text-align: center;
   margin: 4rem 0;
+  text-transform: uppercase;
 }
 .about {
   display: flex;
@@ -157,9 +180,8 @@ nav a:hover {
   gap: 2rem;
 }
 .about img {
-  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
-  border-top: var(--slate-blue-400) 5px solid;
-  border-bottom: var(--slate-blue-400) 5px solid;
+  border-radius: 49% 51% 45% 55% / 32% 66% 34% 68%;
+  border: var(--slate-blue-400) 5px solid;
 }
 .col-2:last-child {
   flex-basis: 80%;
@@ -171,14 +193,17 @@ nav a:hover {
 }
 
 .my-skills {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--zany-pink-50);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: var(--light-shadow);
 }
 
-.skills-ico {
-  font-size: 5rem;
+.my-skills img {
+  padding: 1rem;
+  margin: 1rem auto;
 }
 
 footer {
@@ -214,4 +239,128 @@ footer .copy {
 .signature {
   font-family: 'Allura', cursive;
   font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+  
+  .hamburger {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: none;
+    color: var(--slate-blue-100);
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .closeIcon {
+    display: none;
+  }
+  .fa-bars, .fa-times {
+    font-size: 1.5rem;
+  }
+  .menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+    flex-direction: column;
+  }
+  
+  .showMenu {
+    transform: translateY(0);
+  }
+  #home .home-title {
+    position: absolute;
+    top: 35%;
+    font-size: 3.5rem;
+  }
+  #home .home-subtitle {
+    position: absolute;
+    top: 45%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+  }
+
+  #about, #portfolio, #skills {
+  padding-top: 3rem;
+  margin: 2rem;
+}
+  .about {
+    flex-direction: column;
+  }
+  
+  .col-2:last-child {
+    flex-basis: 100%;
+  }
+
+  .my-skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #home .home-title {
+    position: absolute;
+    top: 25%;
+    font-size: 3.5rem;
+  }
+  #home .home-subtitle {
+    position: absolute;
+    top: 45%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+  }
+
+  .my-skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+.title {
+  font-size: 2.5rem;
+}
+  #about {
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .contact {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  footer .copy {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .my-skills {
+    grid-template-columns: 1fr;
+  }
 }
