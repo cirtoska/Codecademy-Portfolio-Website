@@ -163,7 +163,36 @@ nav a:hover {
   border-radius: 20px;
   box-shadow: var(--dark-shadow);
 }
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.btn {
+  border: none;
+  padding: 5px 10px;
+  background-color: var(--zany-pink-500);
+  width: 100%;
+  transition: all ease 1s;
+}
+.btn:hover {
+  background-color: var(--zany-pink-400);
+}
 
+.btn a {
+  color: var(--clr-white);
+  text-decoration: none;
+}
+.btn a {
+  color: var(--clr-white);
+  text-decoration: none;
+}
+.github-btn, .preview-btn {
+  font-size: 1rem;
+}
+.buttons .fa-github, .buttons .fa-eye {
+  padding-right: 5px;
+}
 .title {
   font-family: 'Comfortaa', cursive;
   font-size: 3rem;
